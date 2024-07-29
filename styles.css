@@ -10,6 +10,16 @@ body {
     position: relative; /* Posisi relatif untuk menu burger */
 }
 
+.container {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    width: 200px;
+    background-color: #E1A06C;
+}
+
 .navbar a {
     float: left;
     display: block;
@@ -85,6 +95,18 @@ body {
     border-radius: 10px;
 }
 
+.packages{
+    background-color: #E1A06C;
+}
+
+h2 {
+    color: white;
+}
+
+.package-item{
+    background-color: #ffffff;
+}
+
 /* Main Sections */
 .novels, .packages, .order-form {
     padding: 20px;
@@ -156,9 +178,13 @@ body {
     }
 
     .container {
-        width: 100%;
-        box-sizing: border-box;
-        border: none;
+        display: inline-block;
+        margin: 10px;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 20px;
+        width: 200px;
+        background-color: #E1A06C;
     }
 }
 
@@ -172,7 +198,13 @@ body {
     }
 
     .container {
-        border-radius: 10px;
+        display: inline-block;
+        margin: 10px;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 20px;
+        width: 200px;
+        background-color: #E1A06C;
     }
 }
 
