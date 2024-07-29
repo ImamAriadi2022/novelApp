@@ -39,22 +39,22 @@ document.getElementById('orderForm').addEventListener('submit', function(event) 
 
         // Invoice details
         doc.setFontSize(12);
-        doc.text(`Name: ${name}`, 20, 40);
+        doc.text(`Nama Pelanggan: ${name}`, 20, 40);
         doc.text(`Email: ${email}`, 20, 50);
-        doc.text(`Package: ${package}`, 20, 60);
+        doc.text(`Paket: ${package}`, 20, 60);
 
         // Add more styles, lines or rectangles if needed
         doc.setDrawColor(0, 0, 0);
         doc.setFillColor(230, 230, 230);
         doc.rect(15, 70, 180, 20, 'FD'); // Filled rectangle with border
 
-        doc.text('Thank you for your purchase!', 20, 80);
+        doc.text('terima kasih. silahkan kirim kan invoicenya ke admin', 20, 80);
 
         // Save and download the PDF
         doc.save('invoice.pdf');
 
         // Optional: Show success message
-        document.getElementById('successMessage').textContent = "Order submitted successfully!";
+        document.getElementById('successMessage').textContent = "Pemesanan Berhasil";
         document.getElementById('successMessage').style.opacity = 1;
         setTimeout(() => {
             document.getElementById('successMessage').style.opacity = 0;

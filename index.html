@@ -19,36 +19,65 @@
 </header>
 
 <section class="hero">
-    <h1>Welcome to Novel Store</h1>
-    <p>Your one-stop shop for the best novels</p>
+    <h1>Selamat Datang di NovelStore</h1>
+    <p class="transparent-background">Buat novel favorit mu disini</p>
 </section>
 
 <main>
     <section id="novels" class="novels">
         <h2>Our Novels</h2>
         <article class="novel-item">
-            <img src="novel1.jpg" alt="Novel 1">
-            <p>Novel 1</p>
+            <img src="img/novel/1.jpg" alt="Novel 1">
+            <p>6 Sekawan</p>
         </article>
         <article class="novel-item">
-            <img src="novel2.jpg" alt="Novel 2">
-            <p>Novel 2</p>
+            <img src="img/novel/2.jpg" alt="Novel 2">
+            <p>last lingh aurora</p>
         </article>
         <article class="novel-item">
-            <img src="novel3.jpg" alt="Novel 3">
-            <p>Novel 3</p>
+            <img src="img/novel/3.jpg" alt="Novel 3">
+            <p>Selagi Hujan Masih air</p>
+        </article>
+        <article class="novel-item">
+            <img src="img/novel/4.jpg" alt="Novel 1">
+            <p>inilah Hidupku</p>
+        </article>
+        <article class="novel-item">
+            <img src="img/novel/5.jpg" alt="Novel 2">
+            <p>keluarga</p>
+        </article>
+        <article class="novel-item">
+            <img src="img/novel/6.jpg" alt="Novel 3">
+            <p>hanya Moment Bukan Komitmen</p>
         </article>
     </section>
 
     <section id="packages" class="packages">
         <h2>Purchase Packages</h2>
         <article class="package-item">
-            <img src="package1.jpg" alt="Package 1">
-            <p>Package 1</p>
+            <img src="img/paket/1.jpg" alt="Package 1">
+            <h3>Paket pertama</h3>
+            <ul class="list-paket">
+                <li>Jumlah kata : 10k++</li>
+                <li>Waktu : 15 hari max</li>
+                <li>Harga : 65000</li>
+                <li>Termasuk cover</li>
+                <li>Dikirim dalam bentuk file</li>
+                <li>Setelah order wajib menceritakan kisah</li>
+                <li>kirim cerita di Wa</li>
+            </ul>
         </article>
         <article class="package-item">
-            <img src="package2.jpg" alt="Package 2">
-            <p>Package 2</p>
+            <img src="img/paket/2.jpg" alt="Package 2">
+            <h3>Paket kedua</h3>
+            <ul class="list-paket">
+                <li>Jumlah Kata : 10K++</li>
+                <li>Waktu : 5 Hari Max</li>
+                <li>Harga 10k</li>
+                <li>Termasuk Cover</li>
+                <li>Dikrim dalam bentuk file</li>
+                <li>Setelah order tidak wajib menceritakan kisah</li>
+            </ul>
         </article>
     </section>
 
@@ -56,17 +85,17 @@
         <div class="container">
             <h2>Order Form</h2>
             <form id="orderForm">
-                <label for="name">Name:</label><br>
+                <label for="name">Nama:</label><br>
                 <input type="text" id="name" name="name"><br>
                 <span id="nameError" class="error"></span><br>
                 <label for="email">Email:</label><br>
                 <input type="email" id="email" name="email"><br>
                 <span id="emailError" class="error"></span><br>
-                <label for="package">Package:</label><br>
+                <label for="package">Paket:</label><br>
                 <select id="package" name="package">
-                    <option value="">Select a package</option>
-                    <option value="package1">Package 1</option>
-                    <option value="package2">Package 2</option>
+                    <option value="">Pilih paket</option>
+                    <option value="package1">Paket 1</option>
+                    <option value="package2">Paket 2</option>
                 </select><br>
                 <span id="packageError" class="error"></span><br>
                 <button type="submit">Submit</button>
@@ -77,7 +106,7 @@
 </main>
 
 <footer class="footer">
-    <p>© 2024 Novel Store. All rights reserved.</p>
+    <p>© 2024 Novel Store</p>
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
