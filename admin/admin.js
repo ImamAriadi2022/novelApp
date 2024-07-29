@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    fetch('https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec')
+    fetch('https://script.google.com/macros/s/AKfycbyaCi_XOzCe7GXXsq-3BcgvQsxVNB-Yz_NS8msDfQJ-F6gkTW6X5qBZ3Pnccf5EsPcv/exec')
         .then(response => response.json())
         .then(data => {
             const ordersTable = document.getElementById('ordersTable').getElementsByTagName('tbody')[0];
@@ -45,7 +45,7 @@ function editOrder(index, name, email, package) {
     const newPackage = prompt('Enter new package:', package);
 
     if (newName !== null && newEmail !== null && newPackage !== null) {
-        fetch('https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec', {
+        fetch('https://script.google.com/macros/s/AKfycbyaCi_XOzCe7GXXsq-3BcgvQsxVNB-Yz_NS8msDfQJ-F6gkTW6X5qBZ3Pnccf5EsPcv/exec', {
             method: 'POST',
             body: JSON.stringify({ index: index, name: newName, email: newEmail, package: newPackage, action: 'edit' }),
             headers: { 'Content-Type': 'application/json' }
@@ -66,7 +66,7 @@ function editOrder(index, name, email, package) {
 }
 
 function deleteOrder(index) {
-    fetch('https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec', {
+    fetch('https://script.google.com/macros/s/AKfycbyaCi_XOzCe7GXXsq-3BcgvQsxVNB-Yz_NS8msDfQJ-F6gkTW6X5qBZ3Pnccf5EsPcv/exec', {
         method: 'POST',
         body: JSON.stringify({ index: index, action: 'delete' }),
         headers: { 'Content-Type': 'application/json' }

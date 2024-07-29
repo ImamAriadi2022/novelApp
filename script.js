@@ -27,7 +27,7 @@ document.getElementById('orderForm').addEventListener('submit', function(event) 
 
     if (valid) {
         const orderData = { name, email, package };
-        fetch('https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec', {
+        fetch('https://script.google.com/macros/s/AKfycbyaCi_XOzCe7GXXsq-3BcgvQsxVNB-Yz_NS8msDfQJ-F6gkTW6X5qBZ3Pnccf5EsPcv/exec', {
             method: 'POST',
             body: JSON.stringify(orderData),
             headers: { 'Content-Type': 'application/json' }
