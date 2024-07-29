@@ -26,37 +26,38 @@ document.getElementById('orderForm').addEventListener('submit', function(event) 
     }
 
     if (valid) {
-        const orderData = { name, email, package };
-        fetch('https://script.google.com/macros/s/AKfycbyaCi_XOzCe7GXXsq-3BcgvQsxVNB-Yz_NS8msDfQJ-F6gkTW6X5qBZ3Pnccf5EsPcv/exec', {
-            method: 'POST',
-            body: JSON.stringify(orderData),
-            headers: { 'Content-Type': 'application/json' }
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.status === 'success') {
-                const { jsPDF } = window.jspdf;
-                const doc = new jsPDF();
+        const { jsPDF } = window.jspdf;
+        const doc = new jsPDF();
 
-                doc.text('Invoice', 20, 20);
-                doc.text(`Name: ${name}`, 20, 30);
-                doc.text(`Email: ${email}`, 20, 40);
-                doc.text(`Package: ${package}`, 20, 50);
+        // Header
+        doc.setFontSize(18);
+        doc.text('Invoice', 105, 20, null, null, 'center');
 
-                doc.save('invoice.pdf');
-                
-                document.getElementById('successMessage').textContent = "Order submitted successfully!";
-                document.getElementById('successMessage').style.opacity = 1;
-                setTimeout(() => {
-                    document.getElementById('successMessage').style.opacity = 0;
-                }, 5000);
-            } else {
-                alert('Error submitting order. Please try again.');
-            }
-        })
-        .catch(error => {
-            alert('Error submitting order. Please try again.');
-            console.error('Error:', error);
-        });
+        // Draw a line under the header
+        doc.setLineWidth(0.5);
+        doc.line(20, 25, 190, 25);
+
+        // Invoice details
+        doc.setFontSize(12);
+        doc.text(`Name: ${name}`, 20, 40);
+        doc.text(`Email: ${email}`, 20, 50);
+        doc.text(`Package: ${package}`, 20, 60);
+
+        // Add more styles, lines or rectangles if needed
+        doc.setDrawColor(0, 0, 0);
+        doc.setFillColor(230, 230, 230);
+        doc.rect(15, 70, 180, 20, 'FD'); // Filled rectangle with border
+
+        doc.text('Thank you for your purchase!', 20, 80);
+
+        // Save and download the PDF
+        doc.save('invoice.pdf');
+
+        // Optional: Show success message
+        document.getElementById('successMessage').textContent = "Order submitted successfully!";
+        document.getElementById('successMessage').style.opacity = 1;
+        setTimeout(() => {
+            document.getElementById('successMessage').style.opacity = 0;
+        }, 5000);
     }
 });

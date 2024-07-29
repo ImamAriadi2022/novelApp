@@ -5,74 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Novel Store</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
 </head>
 <body>
 
-<div class="navbar">
-    <a href="#home">Home</a>
-    <a href="#novels">Novels</a>
-    <a href="#packages">Packages</a>
-    <a href="#order">Order</a>
-    <a href="admin/admin.html">Admin</a>
-</div>
+<header class="navbar">
+    <nav>
+            <a href="#home">Home</a>
+            <a href="#novels">Novels</a>
+            <a href="#packages">Packages</a>
+            <a href="#order">Order</a>
+    </nav>
+</header>
 
-<div class="hero">
+<section class="hero">
     <h1>Welcome to Novel Store</h1>
     <p>Your one-stop shop for the best novels</p>
-</div>
+</section>
 
-<div id="novels" class="novels">
-    <h2>Our Novels</h2>
-    <div class="novel-item">
-        <img src="novel1.jpg" alt="Novel 1">
-        <p>Novel 1</p>
-    </div>
-    <div class="novel-item">
-        <img src="novel2.jpg" alt="Novel 2">
-        <p>Novel 2</p>
-    </div>
-    <div class="novel-item">
-        <img src="novel3.jpg" alt="Novel 3">
-        <p>Novel 3</p>
-    </div>
-</div>
+<main>
+    <section id="novels" class="novels">
+        <h2>Our Novels</h2>
+        <article class="novel-item">
+            <img src="novel1.jpg" alt="Novel 1">
+            <p>Novel 1</p>
+        </article>
+        <article class="novel-item">
+            <img src="novel2.jpg" alt="Novel 2">
+            <p>Novel 2</p>
+        </article>
+        <article class="novel-item">
+            <img src="novel3.jpg" alt="Novel 3">
+            <p>Novel 3</p>
+        </article>
+    </section>
 
-<div id="packages" class="packages">
-    <h2>Purchase Packages</h2>
-    <div class="package-item">
-        <img src="package1.jpg" alt="Package 1">
-        <p>Package 1</p>
-    </div>
-    <div class="package-item">
-        <img src="package2.jpg" alt="Package 2">
-        <p>Package 2</p>
-    </div>
-</div>
+    <section id="packages" class="packages">
+        <h2>Purchase Packages</h2>
+        <article class="package-item">
+            <img src="package1.jpg" alt="Package 1">
+            <p>Package 1</p>
+        </article>
+        <article class="package-item">
+            <img src="package2.jpg" alt="Package 2">
+            <p>Package 2</p>
+        </article>
+    </section>
 
-<div id="order" class="order-form">
-    <h2>Order Form</h2>
-    <form id="orderForm">
-        <label for="name">Name:</label><br>
-        <input type="text" id="name" name="name"><br>
-        <span id="nameError" class="error"></span><br>
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email"><br>
-        <span id="emailError" class="error"></span><br>
-        <label for="package">Package:</label><br>
-        <select id="package" name="package">
-            <option value="">Select a package</option>
-            <option value="package1">Package 1</option>
-            <option value="package2">Package 2</option>
-        </select><br>
-        <span id="packageError" class="error"></span><br>
-        <button type="submit">Submit</button>
-    </form>
-    <div id="successMessage" class="success"></div>
-</div>
+    <section id="order" class="order-form">
+        <div class="container">
+            <h2>Order Form</h2>
+            <form id="orderForm">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name"><br>
+                <span id="nameError" class="error"></span><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email"><br>
+                <span id="emailError" class="error"></span><br>
+                <label for="package">Package:</label><br>
+                <select id="package" name="package">
+                    <option value="">Select a package</option>
+                    <option value="package1">Package 1</option>
+                    <option value="package2">Package 2</option>
+                </select><br>
+                <span id="packageError" class="error"></span><br>
+                <button type="submit">Submit</button>
+            </form>
+            <div id="successMessage" class="success"></div>
+        </div>
+    </section>
+</main>
 
-<div class="footer">
+<footer class="footer">
     <p>© 2024 Novel Store. All rights reserved.</p>
-</div>
+</footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
 <script src="script.js"></script>
