@@ -4,22 +4,29 @@ document.getElementById('orderForm').addEventListener('submit', function(event) 
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
     const package = document.getElementById('package').value;
+    const pribadi = document.getElementById('pribadi').value;
 
     let valid = true;
     if (!name) {
-        document.getElementById('nameError').textContent = "Name is required.";
+        document.getElementById('nameError').textContent = "Masukkan nama anda.";
+        valid = false;
+    } else {
+        document.getElementById('nameError').textContent = "";
+    }
+    if (!pribadi) {
+        document.getElementById('nameError').textContent = "Isilah data pribadi untuk novel";
         valid = false;
     } else {
         document.getElementById('nameError').textContent = "";
     }
     if (!email) {
-        document.getElementById('emailError').textContent = "Email is required.";
+        document.getElementById('emailError').textContent = "Masukan email anda";
         valid = false;
     } else {
         document.getElementById('emailError').textContent = "";
     }
     if (!package) {
-        document.getElementById('packageError').textContent = "Package is required.";
+        document.getElementById('packageError').textContent = "Pilihlah paket anda";
         valid = false;
     } else {
         document.getElementById('packageError').textContent = "";
@@ -42,6 +49,7 @@ document.getElementById('orderForm').addEventListener('submit', function(event) 
         doc.text(`Nama Pelanggan: ${name}`, 20, 40);
         doc.text(`Email: ${email}`, 20, 50);
         doc.text(`Paket: ${package}`, 20, 60);
+        doc.text(`Data Pribadi: ${pribadi}`, 20, 60);
 
         // Add more styles, lines or rectangles if needed
         doc.setDrawColor(0, 0, 0);
@@ -60,4 +68,16 @@ document.getElementById('orderForm').addEventListener('submit', function(event) 
             document.getElementById('successMessage').style.opacity = 0;
         }, 5000);
     }
+});
+
+
+//ini buat burger
+// script.js<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.getElementById('navMenu');
+
+    menuToggle.addEventListener('click', function() {
+        navMenu.classList.toggle('active');
+    });
 });

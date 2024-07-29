@@ -10,12 +10,19 @@
 <body>
 
 <header class="navbar">
-    <nav>
+    <div class="navbar-container">
+        <div class="menu-toggle" id="menuToggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <nav id="navMenu">
             <a href="#home">Home</a>
             <a href="#novels">Novels</a>
             <a href="#packages">Packages</a>
             <a href="#order">Order</a>
-    </nav>
+        </nav>
+    </div>
 </header>
 
 <section class="hero">
@@ -88,9 +95,16 @@
                 <label for="name">Nama:</label><br>
                 <input type="text" id="name" name="name"><br>
                 <span id="nameError" class="error"></span><br>
+
                 <label for="email">Email:</label><br>
                 <input type="email" id="email" name="email"><br>
                 <span id="emailError" class="error"></span><br>
+
+                <label for="name">Biodata pribadi</label><br>
+                <input type="text" id="pribadi" name="pribadi"><br>
+                <span id="nameError" class="error"></span><br>
+
+
                 <label for="package">Paket:</label><br>
                 <select id="package" name="package">
                     <option value="">Pilih paket</option>
